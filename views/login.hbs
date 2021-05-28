@@ -5,11 +5,14 @@
     <body>
         <form action="/api/login" method="POST">
         <div>
-            <input name="username" type="text">
+            <input name="city" type="text">
             <br>
-            <input name="password" type="password" required>
-            <br>
-            <button>Submit</button>
+            <button>Find</button>
+            <div>
+                <br><br>
+                {{{temp}}}
+                {{{error}}}
+            </div>
         </div>
         </form>
     </body>
