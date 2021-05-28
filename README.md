@@ -1,2 +1,2 @@
 
-Learning to make express JS login page using MVC pattern
+Learning to make express JS Weather info fetching page in MVC pattern
