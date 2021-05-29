@@ -3,7 +3,7 @@ const axios = require('axios')
 const Weather = require('../model/Model')
 
 exports.renderHomePage = (req, res) => {
-    res.render('index')
+    res.render('index', { title: 'this is title', layout: 'layouts/main' })
 }
 
 exports.renderPostReq = (req, res) => {
