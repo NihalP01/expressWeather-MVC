@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 // app.use(express.static('public'))
 
-const publicPath = path.join(__dirname, "public");
+const publicPath = path.join(__dirname, 'public');
 
 app.use(express.static(publicPath));
 
