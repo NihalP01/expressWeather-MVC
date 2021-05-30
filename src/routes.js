@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const controller = require('./controller/controller')
 
-router.get('/login', controller.renderHomePage)
+router.get('/', controller.renderHomePage)
 
 router.post('/weather', controller.renderPostReq)
 
