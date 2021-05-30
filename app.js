@@ -23,9 +23,9 @@ app.set("view engine", "hbs")
 //     res.render('index')
 // })
 
-app.use('/api', router);
+app.use('/', router);
 
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 app.listen(port, () => {
     console.log(`LoL, running at ${port}`)
