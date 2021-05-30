@@ -4,6 +4,6 @@ const controller = require('./controller/controller')
 
 router.get('/login', controller.renderHomePage)
 
-router.post('/login', controller.renderPostReq)
+router.post('/weather', controller.renderPostReq)
 
 module.exports = router

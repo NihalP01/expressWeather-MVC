@@ -3,7 +3,7 @@ const axios = require('axios')
 const Weather = require('../model/Model')
 
 exports.renderHomePage = (req, res) => {
-    res.render('index', { title: 'this is title', layout: 'layouts/main' })
+    res.render('index', { title: 'Weather', layout: 'layouts/main' })
 }
 
 exports.renderPostReq = (req, res) => {
@@ -15,19 +15,26 @@ exports.renderPostReq = (req, res) => {
 
     if(weather.error.length){
         res.render('index', {
-            error: weather.error.toString()
+            error: weather.error.toString(),
+            layout: 'layouts/main'
         })
     }else{
         axios.get(url).then((response) => {
-            const temp = response.data.main.temp
+            const result = response.data;
+            const date = new Date()
             console.log(response)
-            res.render('index', {
-                temp: `It is currently ${temp} in ${city}`
+            res.render('weather', {
+                temp: result.main.temp, 
+                city: city,
+                date: `${date.getUTCDate()}/${date.getUTCMonth()}/${date.getUTCFullYear()}`,
+                humidity: `Humidity: ${result.main.humidity}% with wind speed of: ${(result.wind.speed).toFixed(2)} KMph`, 
+                layout: 'layouts/main'
             })
         }).catch((error) => {
             const notFound = error.response.data.message
             res.render('index', {
-                error: `${notFound} with name ${city}`
+                error: `${notFound} with name ${city}`,
+                layout: 'layouts/main'
             })
         })
     }

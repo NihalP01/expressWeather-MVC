@@ -16,10 +16,37 @@ p {
 }
 
 .card {
-    border: 1.5vh solid black;
+    border: 1.5vh solid rgb(255, 255, 255);
     max-width: 800px;
     border-radius: 2vh;
-    margin: auto
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.my-label {
+    font-size: 18px;
+    color: rgb(146, 39, 20);
+}
+
+.my-div {
+    height: 50px;
+    position: relative;
+}
+
+.my-btn {
+    background-color: rgb(251, 73, 73);
+    border: 2px solid rgb(251, 73, 73);
+    font-size: 18px;
+    color: white;
+    border-radius: 6px;
+    margin: 0;
+    padding: 5px;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .col-8 {
@@ -37,8 +64,7 @@ p {
     padding: 1rem
 }
 
-.row,
-.col {
+.row, .col {
     margin: 0
 }
 
@@ -48,13 +74,18 @@ p {
     padding: 2vh
 }
 
+.btn {
+    border: 2px solid red;
+    border-radius: 8px;
+    background-color: red;
+}
+
 @media(max-width:768px) {
     .top {
         text-align: center;
         font-size: 0.5rem;
         padding: 1vh
     }
-
     .top .col {
         padding: 0 0.5vh
     }
@@ -63,6 +94,7 @@ p {
 .temp {
     padding: 8vh;
     text-align: center;
+    color: rgb(28, 85, 255);
     font-size: 18vh;
     font-weight: bold
 }
@@ -101,11 +133,9 @@ p {
         align-self: center;
         font-size: o.8rem
     }
-
     .time h2 {
         font-size: 0.9rem
     }
-
     .col-5 {
         padding: 1vh 0
     }
