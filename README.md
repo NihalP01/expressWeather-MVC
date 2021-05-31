@@ -1,2 +1,4 @@
-
-Learning to make express JS Weather info fetching page in MVC pattern
+##Express-JS 
+This project is made by following the MVC pattern. This is a simple weather fecthing webpage.
+<br>
+You can check the demo [Here](https://weathercheck00.herokuapp.com/)
