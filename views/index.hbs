@@ -1,4 +1,24 @@
-<form class="w3-container w3-round w3-card-4 w3-light-grey" action="/weather" method="POST">
+<div class="w3-card-4 w3-margin w3-display-middle w3-round-large">
+  <div class="w3-container w3-blue w3-round-large">
+    <h2>Weather Checker</h2>
+  </div>
+  <form class="w3-container" action="/weather" method="POST">
+    <p>
+     <div class="w3-center w3-margin">
+    <label class="w3-text-teal" style="font-size: 18px"><b>Enter city/Place name</b></label>
+    <br>
+    <label class="w3-text-red">{{{error}}}</label>
+    </div>       
+    <input class="w3-input w3-border w3-sand w3-round-xlarge" name="city" type="text"></p>
+    <div class="w3-center">
+    <input class="w3-btn w3-teal w3-round-large" type="submit" value="Search">
+    </div>
+  </form>
+</div>
+
+
+
+{{!-- <form class="w3-container w3-round w3-card-4 w3-light-grey" action="/weather" method="POST">
     <div class="w3-center  w3-padding-16">
         <input class="w3-input w3-border w3-round-large" name="city" type="text" placeholder="Enter City name">
     </div>
@@ -9,7 +29,7 @@
     <div class="w3-padding-16 w3-center">
         <input class="w3-button w3-teal w3-round-large" style="width:30%" type="submit" value="Go">
     </div>
-</form>
+</form> --}}
 
 
 
